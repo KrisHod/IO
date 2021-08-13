@@ -1,4 +1,4 @@
-package examples.Reader;
+package examples.Writer;
 
 import java.io.Serializable;
 
