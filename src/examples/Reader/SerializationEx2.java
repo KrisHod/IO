@@ -1,6 +1,6 @@
-package examples.Writer;
+package examples.Reader;
 
-import examples.Reader.Employee;
+import examples.Writer.Employee;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

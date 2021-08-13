@@ -4,7 +4,7 @@ import java.io.*;
 
 public class BufferedReaderEx {
     public static void main(String[] args) {
-        try (BufferedReader reader= new BufferedReader(new FileReader("Verse.txt"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("Verse.txt"));
              BufferedWriter writer = new BufferedWriter(new FileWriter("Copy.txt"))) {
 //            int character;
 //            while ((character= reader.read()) !=-1){ //copy by character
@@ -12,7 +12,7 @@ public class BufferedReaderEx {
 //            }
 
             String line;
-            while ((line=reader.readLine()) !=null){ //copy by line
+            while ((line = reader.readLine()) != null) { //copy by line
                 writer.write(line);
                 writer.write('\n');
             }

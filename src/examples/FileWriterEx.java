@@ -13,12 +13,11 @@ public class FileWriterEx {
         FileWriter writer = null;
         try {
             writer = new FileWriter("Verse.txt", true);
-           // writer.write(poetry);
+            // writer.write(poetry);
             writer.write(author);
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             writer.close();
         }
     }
