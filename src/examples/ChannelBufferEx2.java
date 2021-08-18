@@ -8,8 +8,8 @@ import java.nio.channels.FileChannel;
 
 public class ChannelBufferEx2 {
     public static void main(String[] args) {
-        try(RandomAccessFile file = new RandomAccessFile("Verse.txt", "r");
-            FileChannel channel = file.getChannel()){
+        try (RandomAccessFile file = new RandomAccessFile("Verse.txt", "r");
+             FileChannel channel = file.getChannel()) {
             ByteBuffer buffer = ByteBuffer.allocate(5);
             channel.read(buffer);
             buffer.flip();
@@ -21,7 +21,7 @@ public class ChannelBufferEx2 {
             buffer.compact();
             channel.read(buffer);
             buffer.flip();
-            while (buffer.hasRemaining()){
+            while (buffer.hasRemaining()) {
                 System.out.println((char) buffer.get());
             }
             System.out.println("--------");

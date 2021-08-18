@@ -8,8 +8,8 @@ public class RandomAccessFileEx {
     public static void main(String[] args) {
         try (RandomAccessFile file = new RandomAccessFile("Verse.txt", "rw")) {
 
-            int c =file.read(); //reads by byte and moves pointer
-            System.out.println((char)c);
+            int c = file.read(); //reads by byte and moves pointer
+            System.out.println((char) c);
 
             String line = file.readLine();
             System.out.println(line);
@@ -21,7 +21,7 @@ public class RandomAccessFileEx {
             long position = file.getFilePointer();
             System.out.println(position);
 
-            file.seek(file.length()-1);
+            file.seek(file.length() - 1);
             file.writeBytes("\n\t\t\t\t\t1601");
 
         } catch (FileNotFoundException e) {
